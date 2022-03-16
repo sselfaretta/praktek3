@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Konversi Nilai</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+
+	//<!--
+
+	function konversi(){
+		var angka=document.kirim.angka.value;
+		if (angka>=0 && angka<=40)
+			document.kirim.huruf.value='E';
+		else if (angka>=41 && angka<=55)
+			document.kirim.huruf.value='D';
+		else if (angka>=56 && angka<=60)
+			document.kirim.huruf.value='C';
+		else if (angka>=61 && angka<=65)
+			document.kirim.huruf.value='BC';
+		else if (angka>=66 && angka<=70)
+			document.kirim.huruf.value='B';
+		else if (angka>=71 && angka<=80)
+			document.kirim.huruf.value='AB';
+		else if (angka>=81 && angka<=100)
+			document.kirim.huruf.value='A';
+	}
+
+	function resetForm(){
+    	document.kirim.reset();
+	}
+
+</script>
+
+<form name="kirim" action="#">
+	<p>Nilai Angka <input type="text" name="angka" size="20" /></p>
+	<p>Nilai Huruf <input type="text" name="huruf" size="20" disabled="true" /></p>
+	<input type="button" value="KONVERSI" onClick="konversi()" />
+	<input type="button" value="RESET" onClick="resetForm()" />
+</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+
+    //<!--
+
+    function tambah(){
+        var x=eval(document.kirim.x.value);
+        var y=eval(document.kirim.y.value);
+        var z = x + y;
+        document.kirim.hasil.value = z;
+    }
+
+    function kurang(){
+        var x=eval(document.kirim.x.value);
+        var y=eval(document.kirim.y.value);
+        var z = x - y;
+        document.kirim.hasil.value = z;
+    }
+
+    function kali(){
+        var x=eval(document.kirim.x.value);
+        var y=eval(document.kirim.y.value);
+        var z = x * y;
+        document.kirim.hasil.value = z;
+    }
+
+    function bagi(){
+        var x=eval(document.kirim.x.value);
+        var y=eval(document.kirim.y.value);
+        var z = x / y;
+        document.kirim.hasil.value = z;
+    }
+
+    function resetForm(){
+        document.kirim.reset();
+    }
+
+    //-->
+
+</script>
+
+<form name="kirim" action="#">
+    <p>Bil 1  <input type="text" name="x" /></p>
+    <p>Bil 2  <input type="text" name="y" /></p>
+    <p>Hasil  <input type="text" name="hasil" disabled="true" /></p>
+    <input type="button" value="+" onClick="tambah()" />
+    <input type="button" value="-" onClick="kurang()" />
+    <input type="button" value="*" onClick="kali()" />
+    <input type="button" value="/" onClick="bagi()" />
+    <input type="button" value="CLEAR" onClick="resetForm()" />
+</form>
+</body>
+</html>
